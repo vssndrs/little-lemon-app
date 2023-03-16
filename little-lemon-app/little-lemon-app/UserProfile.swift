@@ -43,6 +43,9 @@ struct UserProfile: View {
                 .background(Color(.white))
                 .clipShape(Capsule())
             Button("Logout"){
+                UserDefaults.standard.set("", forKey: kFirstName)
+                UserDefaults.standard.set("", forKey: kLastName)
+                UserDefaults.standard.set("", forKey: kEmail)
                 UserDefaults.standard.set(false, forKey: kIsLoggedIn)
                 self.presentation.wrappedValue.dismiss()
             }
