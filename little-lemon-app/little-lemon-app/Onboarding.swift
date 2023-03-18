@@ -49,7 +49,7 @@ struct Onboarding: View {
                     Spacer()
                         .frame(height: 30)
                     Button("Register"){
-                        if(!kFirstName.isEmpty && !kLastName.isEmpty && !kEmail.isEmpty) {
+                        if(!firstName.isEmpty && !lastName.isEmpty && !email.isEmpty) {
                             UserDefaults.standard.set(firstName, forKey: kFirstName)
                             UserDefaults.standard.set(lastName, forKey: kLastName)
                             UserDefaults.standard.set(email, forKey: kEmail)
